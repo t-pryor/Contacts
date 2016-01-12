@@ -17,6 +17,7 @@
 		2243416E1C44147C00197DE8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2243416D1C44147C00197DE8 /* Contact.swift */; };
 		224341761C4495C700197DE8 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224341751C4495C700197DE8 /* NewContactViewController.swift */; };
 		224341791C45391700197DE8 /* DefaultImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 224341781C45391700197DE8 /* DefaultImage.m */; };
+		2243417B1C4558AE00197DE8 /* ExistingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2243417A1C4558AE00197DE8 /* ExistingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		224341751C4495C700197DE8 /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		224341771C45391700197DE8 /* DefaultImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultImage.h; sourceTree = "<group>"; };
 		224341781C45391700197DE8 /* DefaultImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultImage.m; sourceTree = "<group>"; };
+		2243417A1C4558AE00197DE8 /* ExistingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +99,11 @@
 				224341531C4408C100197DE8 /* Assets.xcassets */,
 				224341551C4408C100197DE8 /* LaunchScreen.storyboard */,
 				224341581C4408C100197DE8 /* Info.plist */,
+				2243416C1C44147C00197DE8 /* Contacts-Bridging-Header.h */,
 				224341471C4408C100197DE8 /* Supporting Files */,
 				2243416D1C44147C00197DE8 /* Contact.swift */,
-				2243416C1C44147C00197DE8 /* Contacts-Bridging-Header.h */,
 				224341751C4495C700197DE8 /* NewContactViewController.swift */,
+				2243417A1C4558AE00197DE8 /* ExistingViewController.swift */,
 				224341771C45391700197DE8 /* DefaultImage.h */,
 				224341781C45391700197DE8 /* DefaultImage.m */,
 			);
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2243417B1C4558AE00197DE8 /* ExistingViewController.swift in Sources */,
 				2243416E1C44147C00197DE8 /* Contact.swift in Sources */,
 				224341761C4495C700197DE8 /* NewContactViewController.swift in Sources */,
 				224341791C45391700197DE8 /* DefaultImage.m in Sources */,

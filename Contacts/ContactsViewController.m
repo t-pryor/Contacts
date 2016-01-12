@@ -12,7 +12,7 @@
 // this header file exposes your Swift code to the file that imports it
 // contains interfaces for your Swift code to share with the ObjC component of your app
 // naming convention is ProductModuleName-Swift.h
-
+// exposes all Swift code
 
 #import "Contacts-Swift.h"
 
@@ -58,7 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
                                                             forIndexPath:indexPath];
     Contact *contact = self.contacts[indexPath.row];
     
@@ -66,6 +66,13 @@
     
     return cell;
 }
+
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    [self performSegueWithIdentifier:@"showDetail" sender:nil];
+//    NSLog(@"HERE");
+//    
+//}
 
 // Unwind segue
 // allows you to define a relationship between a a view controller and the VC that preceeds it in the navigation flow
@@ -96,6 +103,29 @@
         [self.tableView reloadData];
     }
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Contact *c = self.contacts[indexPath.row];
+        
+        
+        UINavigationController *nav = [segue destinationViewController];
+        ExistingViewController *evc = (ExistingViewController *)nav.topViewController;
+        
+        evc.currentContact = c;
+    }
+        
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {}
+
+// define unwind action for ExistingViewController
+- (IBAction)cancelToContactDetailsViewController:(UIStoryboardSegue *)segue
+{
+    // No action to take
 }
 
 

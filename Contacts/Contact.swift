@@ -14,7 +14,6 @@ import Foundation
 //  but Swift's structs not visible to ObjC
 
 
-
 class Contact: NSObject {
     let name: String
     init(contactName: String) {
